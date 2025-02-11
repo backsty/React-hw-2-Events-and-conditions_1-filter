@@ -1,0 +1,110 @@
+.portfolio {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background-color) 0%, rgba(33, 150, 243, 0.1) 100%);
+  padding: calc(var(--spacing-unit) * 2) 0;
+}
+
+.portfolio-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-unit);
+  font-weight: 700;
+}
+
+.portfolio-description {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Эффект параллакса при скролле */
+.portfolio {
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .portfolio-title {
+    font-size: 2rem;
+  }
+
+  .portfolio-description {
+    font-size: 1rem;
+    padding: 0 var(--spacing-unit);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: calc(var(--spacing-unit) * 1.5) 0;
+  }
+
+  .portfolio-title {
+    font-size: 1.75rem;
+  }
+
+  .portfolio-header {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Поддержка тёмной темы */
+@media (prefers-color-scheme: dark) {
+  .portfolio {
+    background: linear-gradient(135deg, var(--background-color) 0%, rgba(33, 150, 243, 0.05) 100%);
+  }
+
+  .portfolio-title {
+    color: #fff;
+  }
+
+  .portfolio-description {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Поддержка reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-header {
+    animation: none;
+    opacity: 1;
+  }
+}
