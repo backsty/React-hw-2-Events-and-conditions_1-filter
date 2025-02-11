@@ -1,6 +1,11 @@
 Портфолио с фильтрами
 ===
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-deployed-success)](https://backsty.github.io/React-hw-2-Events-and-conditions_1-filter/)
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-blue)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.1.0-purple)](https://vitejs.dev/)
+
 Необходимо реализовать портфолио с фильтрами, аналогичное указанному на изображении.
 
 ![portfolio-all](./assets/portfolio-all.png)
